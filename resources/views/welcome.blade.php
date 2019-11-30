@@ -54,7 +54,7 @@
                             <i class="icon-screen-desktop m-auto text-primary"></i>
                         </div>
                         <h3>Tableau de données</h3>
-                        <p class="lead mb-0">Vittesse du vent</p>
+                        <p class="lead mb-0">Vitesse du vent</p>
                         <p class="lead mb-0">Direction du vent</p>
                         <p class="lead mb-0">Hauteur des vagues</p>
                         <p class="lead mb-0">Note /10</p>
