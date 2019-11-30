@@ -15,3 +15,11 @@
     - DB_DATABASE
     - DB_USERNAME
     - DB_PASSWORD
+
+## Database Migrations
+ - In your database server, create a database. 
+ Create your database with the same name of .env file content (DB_DATABASE)
+ 
+ - Into src file, open a terminal and run "php artisan migrate:fresh"
+ 
+ Now All your data tables are in your database.
