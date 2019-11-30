@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>Le grand bleu</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -53,11 +53,52 @@
                         <div class="features-icons-icon d-flex">
                             <i class="icon-screen-desktop m-auto text-primary"></i>
                         </div>
-                        <h3>Tableau de données</h3>
-                        <p class="lead mb-0">Vittesse du vent</p>
-                        <p class="lead mb-0">Direction du vent</p>
-                        <p class="lead mb-0">Hauteur des vagues</p>
-                        <p class="lead mb-0">Note /10</p>
+                        <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">J-n</th>
+      <th scope="col">j-1</th>
+      <th scope="col">Jour J</th>
+      <th scope="col">Jour +1</th>
+      <th scope="col">Jour +2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Windirection</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">windspeed</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th scope="row">Swell</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+        <th scope="row">Visibility</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+  </tbody>
+</table>
                     </div>
                 </div>
             </div>
