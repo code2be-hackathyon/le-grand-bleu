@@ -3,6 +3,7 @@ version: '3.7'
 services:
   app:
     image: chialab/php:7.2
+    working_dir: /app
     volumes:
       - ./:/app
     ports:
