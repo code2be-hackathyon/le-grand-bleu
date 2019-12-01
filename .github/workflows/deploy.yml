@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: SCP Files
-      uses: appleboy/scp-action@v0.0.1
+      uses: appleboy/scp-action@master
       with:
         host: hac01.aukfood.org
         username: ${{ secrets.USERNAME }}
