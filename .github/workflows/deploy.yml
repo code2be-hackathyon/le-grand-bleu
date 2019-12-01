@@ -21,7 +21,7 @@ jobs:
         source: .
         target: /var/app/code
     - name: Execute migrations and restart app
-      uses: appleboy/ssh-action@v0.0.2
+      uses: appleboy/ssh-action@master
       with:
         host: hac01.aukfood.org
         username: ${{ secrets.USERNAME }}
