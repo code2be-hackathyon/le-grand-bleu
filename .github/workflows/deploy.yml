@@ -13,10 +13,21 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: SCP Files
-      uses: appleboy/scp-action@master
+      uses: appleboy/scp-action@v0.0.1
       with:
         host: hac01.aukfood.org
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
         source: .
         target: /var/app/code
+    - name: Execute migrations and restart app
+      uses: appleboy/ssh-action@v0.0.2
+      with:
+        host: hac01.aukfood.org
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        script: |
+          cd /var/app/code
+          docker-compose restart app
+          docker-compose exec app php artisan migrate --force
+      
