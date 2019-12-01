@@ -29,5 +29,5 @@ jobs:
         script: |
           cd /var/app/code
           docker-compose restart app
-          docker-compose exec app php artisan migrate --force
+          docker-compose exec -T app php artisan migrate --force
       
