@@ -29,7 +29,7 @@ class Test implements ShouldQueue
      */
     public function handle()
     {
-        //
-        var_dump("test");
+        $mavaleur="test";
+        var_dump($mavaleur);
     }
 }

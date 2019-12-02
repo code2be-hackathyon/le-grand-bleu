@@ -2,8 +2,11 @@
 
 namespace App\Console;
 
+use App\Jobs\Test;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Illuminate\Foundation\Bus\Dispatchable;
+
 
 class Kernel extends ConsoleKernel
 {
@@ -13,6 +16,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
+
         //
     ];
 
@@ -26,7 +30,10 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-        $schedule->job("Test");
+        $schedule->job(new Test())->everyMinute();
+
+
+
 
     }
 
