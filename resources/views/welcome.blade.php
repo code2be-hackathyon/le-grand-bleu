@@ -34,9 +34,9 @@
                            <div class="col-12 col-md-9 mb-2 mb-md-0">
                                <label>
                                    <select name="zone" class="form-control form-control-lg">
-                                       <option>Les Sables d'Olonne</option>
-                                       <option>Les Séchelles</option>
-                                       <option>St Jean de Mont</option>
+                                       @foreach($areaName as $oneName)
+                                           <option>{{$oneName}}</option>
+                                       @endforeach
                                    </select>
                                </label>
                            </div>
@@ -55,7 +55,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                    <div>
                         <div class="features-icons-icon d-flex">
                             <i class="icon-screen-desktop m-auto text-primary"></i>
                         </div>
@@ -73,7 +73,7 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <th scope="row">Windirection</th>
+                              <th scope="row">Direction du vent</th>
                               <td></td>
                               <td></td>
                               <td></td>
@@ -81,7 +81,7 @@
                               <td></td>
                             </tr>
                             <tr>
-                              <th scope="row">windspeed</th>
+                              <th scope="row">Vitesse du vent</th>
                               <td></td>
                               <td></td>
                               <td></td>
@@ -89,7 +89,7 @@
                               <td></td>
                             </tr>
                             <tr>
-                              <th scope="row">Swell</th>
+                              <th scope="row">Hauteur de houle</th>
                               <td></td>
                               <td></td>
                               <td></td>
@@ -97,7 +97,7 @@
                               <td></td>
                             </tr>
                             <tr>
-                                <th scope="row">Visibility</th>
+                                <th scope="row">Visibilité</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -106,12 +106,6 @@
                             </tr>
                           </tbody>
                         </table>
-
-                        <h3>Tableau de données</h3>
-                        <p class="lead mb-0">Vitesse du vent</p>
-                        <p class="lead mb-0">Direction du vent</p>
-                        <p class="lead mb-0">Hauteur des vagues</p>
-                        <p class="lead mb-0">Note /10</p>
                     </div>
                 </div>
             </div>
@@ -222,7 +216,7 @@
                             <a href="#">Privacy Policy</a>
                         </li>
                     </ul>
-                    <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2019. All Rights Reserved.</p>
+                    <p class="text-muted small mb-4 mb-lg-0">&copy; Le Grand Bleu 2019. All Rights Reserved.</p>
                 </div>
                 <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
                     <ul class="list-inline mb-0">

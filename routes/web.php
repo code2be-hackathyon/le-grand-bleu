@@ -11,12 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome', ['wind' => 7]);
-});
+Route::get('/', 'AreaController@getAllName');
 
 Route::get('/getAllArea', 'AreaController@getAll');
 
 Route::get('/getAllDayData', 'DayDataController@getAll');
 
 Route::get('/testAPIWeather', 'DayDataController@getAPIData');
+
