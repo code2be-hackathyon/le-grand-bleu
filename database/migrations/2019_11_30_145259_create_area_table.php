@@ -16,6 +16,10 @@ class CreateAreaTable extends Migration
         Schema::create('area', function (Blueprint $table) {
             $table->bigIncrements('area_id');
             $table->string('area_name');
+            $table->float('area_latitude');
+            $table->float('area_longitude');
+            $table->float('area_preferredWindDirection');
+            $table->float('area_baseNote');
             $table->timestamps();
         });
     }
