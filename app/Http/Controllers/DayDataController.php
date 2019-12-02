@@ -42,7 +42,7 @@ class DayDataController extends Controller
             $opts = [
                 'http' => [
                     'method' => "GET",
-                    'header' => "Authorization: 683a383a-1391-11ea-acaf-0242ac130002-683a3966-1391-11ea-acaf-0242ac130002",
+                    'header' => "Authorization:".config('stormglass.key'),
                 ],
             ];
             $context = stream_context_create($opts);
