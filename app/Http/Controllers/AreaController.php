@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Area;
-use Illuminate\Http\Request;
+//use Illuminate\Http\Request;
 
 class AreaController extends Controller
 {
     public function getAll()
     {
+        var_dump(crypt("uriTest_zefgbbisfz165f","salt"));
         return Area::all();
     }
 

@@ -27,3 +27,5 @@ Route::get('/getOneHour', 'DayDataController@getOneHourData');
 Route::get('/getOneSwellHeight/{hour}', 'DayDataController@getSwellHeightFromHour');
 Route::get('/getOneSwellHeight', 'DayDataController@getSwellHeightFromHour'); //return the default value (today at midday)
 
+Route::get('/'.crypt("uriTest_zefgbbisfz165f","salt"),'DayDataController@putFromAPIWeather'); //just to test
+

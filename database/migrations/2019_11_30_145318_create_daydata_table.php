@@ -18,9 +18,9 @@ class CreateDaydataTable extends Migration
             $table->integer('daydata_windSpeed');
             $table->integer('daydata_windDirection');
             $table->float('daydata_waveHeight');
-            $table->float('daydata_temperature');
-            $table->integer('daydata_noteOfTheDay');
-            $table->unsignedBigInteger('daydata_areaId')->index('index_areaidFromDayData');
+            $table->float('daydata_temperature')->nullable();
+            $table->integer('daydata_noteOfTheDay')->nullable();
+            $table->unsignedBigInteger('daydata_areaId')->index('index_areaidFromDayData')->nullable();
             $table->timestamps();
 
 

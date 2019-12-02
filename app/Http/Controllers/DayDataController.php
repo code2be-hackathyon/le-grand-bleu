@@ -7,14 +7,16 @@ use Exception;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\JsonResponse;
 //use Illuminate\Http\Request;
-//use Illuminate\Support\Facades\DB;
 use App\DayData;
+use Illuminate\Support\Facades\DB;
 use function cache;
 use function response;
 
 
 class DayDataController extends Controller
 {
+    public static $dayTest = 0;
+
     public function index()
     {
         //
@@ -128,5 +130,21 @@ class DayDataController extends Controller
         }
         return $moyValue/$nbValue;
     }
+
+    public function putFromAPIWeather()
+    {
+        $days = [12,36,60,84,108,132,156,180,204,228,240]; //D-D(12h) D+1(12h) D+10(0h max)
+        foreach($days as $hour)
+        {
+            try {
+                DB::table('daydata')->insert(
+                    ['daydata_windSpeed' => $this->getWindSpeedFromHour($hour), 'daydata_windDirection' => $this->getWindDirectionFromHour($hour), 'daydata_waveHeight' => $this->getSwellHeightFromHour()]
+                );
+            } catch (Exception $e) {
+            }
+
+        }
+    }
+
 
 }
