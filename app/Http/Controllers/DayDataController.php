@@ -133,7 +133,7 @@ class DayDataController extends Controller
 
     public function putFromAPIWeather()
     {
-        $days = [12,36,60,84,108,132,156,180,204,228,240]; //D-D(12h) D+1(12h) D+10(0h max)
+        $days = [12,36,60,84,108,132,156,180,204,228,240]; // D-day(12h) D+10(0h max)
         foreach($days as $hour)
         {
             try {
