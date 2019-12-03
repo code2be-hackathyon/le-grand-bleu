@@ -34,7 +34,7 @@
                            <div class="col-12 col-md-9 mb-2 mb-md-0">
                                <label>
                                    <select name="zone" class="form-control form-control-lg">
-                                       @foreach($areaName as $oneName)
+                                       @foreach($areaNames as $oneName)
                                            <option>{{$oneName}}</option>
                                        @endforeach
                                    </select>

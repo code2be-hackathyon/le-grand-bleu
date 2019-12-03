@@ -22,7 +22,7 @@ class AreaController extends Controller
         {
             array_push($areaName,$oneArea["area_name"]);
         }
-//        return $areaName;
-        return view('welcome',['areaName'=>$areaName]);
+        return $areaName;
+        //return view('welcome',['areaName'=>$areaName]);
     }
 }
