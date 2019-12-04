@@ -13,7 +13,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'AreaController@getAllName');
+Route::get('/', 'ViewController@getView');
 
 Route::get('/getAllArea', 'AreaController@getAll');
 
