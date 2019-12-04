@@ -9,7 +9,6 @@ class AreaController extends Controller
 {
     public function getAll()
     {
-        var_dump(crypt("uriTest_zefgbbisfz165f","salt"));
         return Area::all();
     }
 
@@ -22,7 +21,6 @@ class AreaController extends Controller
         {
             array_push($areaName,$oneArea["area_name"]);
         }
-//        return $areaName;
         return view('welcome',['areaName'=>$areaName]);
     }
 }

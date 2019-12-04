@@ -60,20 +60,52 @@
                             <i class="icon-screen-desktop m-auto text-primary"></i>
                         </div>
 
-                        <table class="table table-bordered">
-                          <thead>
+                        <table class="table table-responsive">
+                          <thead class="thead-light">
                             <tr>
                               <th scope="col">#</th>
-                              <th scope="col">J-n</th>
+                              <th scope="col">J-10</th>
+                              <th scope="col">J-9</th>
+                              <th scope="col">J-8</th>
+                              <th scope="col">J-7</th>
+                              <th scope="col">J-6</th>
+                              <th scope="col">J-5</th>
+                              <th scope="col">J-4</th>
+                              <th scope="col">J-3</th>
+                              <th scope="col">J-2</th>
                               <th scope="col">j-1</th>
                               <th scope="col">Jour J</th>
                               <th scope="col">Jour +1</th>
                               <th scope="col">Jour +2</th>
+                              <th scope="col">Jour +3</th>
+                              <th scope="col">Jour +4</th>
+                              <th scope="col">Jour +5</th>
+                              <th scope="col">Jour +6</th>
+                              <th scope="col">Jour +7</th>
+                              <th scope="col">Jour +8</th>
+                              <th scope="col">Jour +9</th>
+                              <th scope="col">Jour +10</th>
                             </tr>
                           </thead>
-                          <tbody>
+                          <tbody class="thead-light">
                             <tr>
                               <th scope="row">Direction du vent</th>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
                               <td></td>
                               <td></td>
                               <td></td>
@@ -82,22 +114,70 @@
                             </tr>
                             <tr>
                               <th scope="row">Vitesse du vent</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr>
                               <th scope="row">Hauteur de houle</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <th scope="row">Visibilité</th>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -199,23 +279,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
-                    <ul class="list-inline mb-2">
-                        <li class="list-inline-item">
-                            <a href="#">About</a>
-                        </li>
-                        <li class="list-inline-item">&sdot;</li>
-                        <li class="list-inline-item">
-                            <a href="#">Contact</a>
-                        </li>
-                        <li class="list-inline-item">&sdot;</li>
-                        <li class="list-inline-item">
-                            <a href="#">Terms of Use</a>
-                        </li>
-                        <li class="list-inline-item">&sdot;</li>
-                        <li class="list-inline-item">
-                            <a href="#">Privacy Policy</a>
-                        </li>
-                    </ul>
+{{--                    <ul class="list-inline mb-2">--}}
+{{--                        <li class="list-inline-item">--}}
+{{--                            <a href="#">About</a>--}}
+{{--                        </li>--}}
+{{--                        <li class="list-inline-item">&sdot;</li>--}}
+{{--                        <li class="list-inline-item">--}}
+{{--                            <a href="#">Contact</a>--}}
+{{--                        </li>--}}
+{{--                        <li class="list-inline-item">&sdot;</li>--}}
+{{--                        <li class="list-inline-item">--}}
+{{--                            <a href="#">Terms of Use</a>--}}
+{{--                        </li>--}}
+{{--                        <li class="list-inline-item">&sdot;</li>--}}
+{{--                        <li class="list-inline-item">--}}
+{{--                            <a href="#">Privacy Policy</a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
                     <p class="text-muted small mb-4 mb-lg-0">&copy; Le Grand Bleu 2019. All Rights Reserved.</p>
                 </div>
                 <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
