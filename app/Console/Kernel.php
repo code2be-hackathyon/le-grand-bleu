@@ -2,10 +2,11 @@
 
 namespace App\Console;
 
-use App\Jobs\Test;
+//use App\Jobs\Test;
+use App\Jobs\UpdateDayData;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use Illuminate\Foundation\Bus\Dispatchable;
+//use Illuminate\Foundation\Bus\Dispatchable;
 
 
 class Kernel extends ConsoleKernel
@@ -30,10 +31,8 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
-        $schedule->job(new Test())->everyMinute();
-
-
-
+        //$schedule->job(new Test())->everyMinute();
+        $schedule->job(new UpdateDayData())->dailyAt("3:00");
 
     }
 

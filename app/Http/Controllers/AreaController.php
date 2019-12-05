@@ -7,7 +7,7 @@ use App\Area;
 
 class AreaController extends Controller
 {
-    public function getAll()
+    public static function getAll()
     {
         return Area::all();
     }
@@ -21,6 +21,7 @@ class AreaController extends Controller
         {
             array_push($areaName,$oneArea["area_name"]);
         }
-        return view('welcome',['areaName'=>$areaName]);
+        //return view('welcome',['areaName'=>$areaName]);
+        return $areaName;
     }
 }
