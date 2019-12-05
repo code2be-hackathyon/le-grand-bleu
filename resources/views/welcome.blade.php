@@ -34,8 +34,8 @@
                            <div class="col-12 col-md-9 mb-2 mb-md-0">
                                <label>
                                    <select name="zone" class="form-control form-control-lg">
-                                       @foreach($areaNames as $oneName)
-                                           <option>{{$oneName}}</option>
+                                       @foreach($areaData as $oneArea)
+                                           <option value={{$oneArea["area_id"]}}>{{$oneArea["area_name"]}}</option>
                                        @endforeach
                                    </select>
                                </label>
@@ -90,27 +90,8 @@
                           <tbody class="thead-light">
                             <tr>
                               <th scope="row">Direction du vent</th>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              @foreach($dayData as $oneDayData)
+                              @endforeach
                             </tr>
                             <tr>
                               <th scope="row">Vitesse du vent</th>

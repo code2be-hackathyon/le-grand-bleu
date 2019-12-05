@@ -11,6 +11,16 @@ class AreaController extends Controller
     {
         return Area::all();
     }
+    public function getAllData()
+    {
+        $areaData = json_decode($this->getAll(), true);
+        $areaDataC = [];
+        foreach($areaData as $oneArea)
+        {
+            array_push($areaDataC,$oneArea);
+        }
+        return $areaDataC;
+    }
 
     public function getAllName()
     {
@@ -23,5 +33,17 @@ class AreaController extends Controller
         }
         //return view('welcome',['areaName'=>$areaName]);
         return $areaName;
+    }
+    public function getAllId()
+    {
+        $areaData = json_decode($this->getAll(), true);
+        $areaId = [];
+
+        foreach ($areaData as $oneArea)
+        {
+            array_push($areaId,$oneArea["area_id"]);
+        }
+        //return view('welcome',['areaName'=>$areaName]);
+        return $areaId;
     }
 }

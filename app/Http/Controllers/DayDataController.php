@@ -10,6 +10,7 @@ use Illuminate\Http\JsonResponse;
 //use Illuminate\Http\Request;
 use App\DayData;
 use Illuminate\Support\Facades\DB;
+//use mysql_xdevapi\Table;
 use function cache;
 use function response;
 
@@ -284,6 +285,17 @@ class DayDataController extends Controller
             }
 
         }
+    }
+
+    public function getAllDataById($id=1)
+    {
+         $pastDays = DB::table('daydata')->select("*")->whereRaw("daydata_date > DATE_FORMAT((NOW() - INTERVAL 10 DAY),'%d%m%Y') AND `daydata_areaId`=".$id)->get();
+         $nextDaysUnTraited = DB::table('daydata')->select("*")->whereRaw("daydata_date <= DATE_FORMAT((NOW() + INTERVAL 10 DAY),'%d%m%Y') AND daydata_areaId = ".$id)->get();
+
+         //var_dump($pastDays);
+         //var_dump($nextDaysUnTraited);
+
+        return [$pastDays,$nextDaysUnTraited];
     }
 
 

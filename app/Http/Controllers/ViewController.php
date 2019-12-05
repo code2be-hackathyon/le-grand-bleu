@@ -10,12 +10,16 @@ class ViewController extends Controller
 {
 
 
-    public function getView()
+    public function getView($id = 1)
     {
 
-        $areaNames = app('App\Http\Controllers\AreaController')->getAllName(); // get names of Area for the form
-        //TODO next step is import data into the array
-        return view('welcome',["areaNames" => $areaNames]);
+
+        $dayData = app('App\Http\Controllers\DayDataController')->getAllDataById($id);
+
+        $areaData = app('App\Http\Controllers\AreaController')->getAllData();
+
+        var_dump($areaData);
+        return view('welcome',["areaData" => $areaData],["dayData" => $dayData]);
     }
 
 }
