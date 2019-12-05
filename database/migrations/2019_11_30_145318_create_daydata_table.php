@@ -15,15 +15,15 @@ class CreateDaydataTable extends Migration
     {
         Schema::create('daydata', function (Blueprint $table) {
             $table->bigIncrements('daydata_id');
-            $table->float('daydata_windSpeed',8,4);
-            $table->integer('daydata_windDirection');
-            $table->float('daydata_waveHeight',8,4);
+            $table->float('daydata_windSpeed',8,4)->nullable();
+            $table->float('daydata_windDirection',8,4)->nullable();
+            $table->float('daydata_waveHeight',8,4)->nullable();
             $table->float('daydata_temperature',8,4)->nullable();
             $table->integer('daydata_noteOfTheDay')->nullable();
             $table->unsignedBigInteger('daydata_areaId')->index('index_areaidFromDayData')->nullable();
-            $table->string('createdAt')->nullable();
-            $table->string('updatedAt')->nullable();
-            $table->string('daydata_date');
+            $table->string('createdAt',10)->nullable();
+            $table->string('updatedAt',10)->nullable();
+            $table->string('daydata_date',10);
 
 
         });

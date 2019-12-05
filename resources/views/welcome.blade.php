@@ -91,6 +91,7 @@
                             <tr>
                               <th scope="row">Direction du vent</th>
                               @foreach($dayData as $oneDayData)
+
                               @endforeach
                             </tr>
                             <tr>
