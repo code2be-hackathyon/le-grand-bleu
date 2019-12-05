@@ -11,6 +11,7 @@ use Illuminate\Http\JsonResponse;
 use App\DayData;
 use Illuminate\Support\Facades\DB;
 //use mysql_xdevapi\Table;
+use stdClass;
 use function cache;
 use function response;
 
@@ -298,11 +299,23 @@ class DayDataController extends Controller
          {
              if(empty($pastDays[$i]))
              {
-                 $pastDays[$i] = "No Value";
+                 $pastDays[$i] = new stdClass();
+                 $pastDays[$i]->daydata_id = "No Value";
+                    $pastDays[$i]->daydata_windSpeed = "No Value";
+                    $pastDays[$i]->daydata_windDirection = "No Value";
+                    $pastDays[$i]->daydata_waveHeight =  "No Value";
+                    $pastDays[$i]->daydata_temperature ="No Value";
+                    $pastDays[$i]->daydata_noteOfTheDay ="No Value";
+                    $pastDays[$i]->daydata_areaId ="No Value";
+                    $pastDays[$i]->createdAt ="No Value";
+                    $pastDays[$i]->updatedAt ="No Value";
+                    $pastDays[$i]->daydata_date = "No Value";
              }
          }
         return [$pastDays,$nextDaysUnTraited];
     }
+
+
 
 
 
