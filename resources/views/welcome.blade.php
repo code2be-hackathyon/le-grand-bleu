@@ -29,20 +29,21 @@
                     <h1 class="mb-5">Le grand bleu</h1>
                 </div>
                <div class="col-md-10 col-lg-8 col-xl-7 mx-auto">
-                   <form>
+                   <form action="/view" method="GET">
                         <div class="form-row">
-                           <div class="col-12 col-md-9 mb-2 mb-md-0">
+                           <div class="col-12 col-md-15 mb-2 mb-md-0">
                                <label>
-                                   <select name="zone" class="form-control form-control-lg">
+                                   <select name="zone" class="form-control form-control-lg" onchange="changeZone($(this))">
                                        @foreach($areaData as $oneArea)
-                                           <option value={{$oneArea["area_id"]}}>{{$oneArea["area_name"]}}</option>
+                                           @if($id==$oneArea['area_id'])
+                                               <option value="{{$oneArea["area_id"]}}" selected>{{$oneArea["area_name"]}}</option>
+                                           @else
+                                            <option value="{{$oneArea["area_id"]}}">{{$oneArea["area_name"]}}</option>
+                                           @endif
                                        @endforeach
                                    </select>
                                </label>
                            </div>
-                            <div class="col-12 col-md-3">
-                                <button type="submit" class="btn btn-block btn-lg btn-primary">Rechercher</button>
-                            </div>
                         </div>
                     </form>
                 </div>
@@ -261,6 +262,13 @@
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+        function changeZone($select){
+            var zone = $select.val();
+            window.location = '/zone/'+zone;
+        }
+    </script>
 
     </body>
 </html>

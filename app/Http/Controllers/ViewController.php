@@ -18,8 +18,8 @@ class ViewController extends Controller
 
         $areaData = app('App\Http\Controllers\AreaController')->getAllData();
 
-        var_dump($dayData[0],$dayData[1]);
-        return view('welcome',["areaData" => $areaData],["dayData" => $dayData]);
+        //var_dump($dayData[0],$dayData[1]);
+        return view('welcome',["areaData" => $areaData,"dayData" => $dayData,'id'=>$id]);
     }
 
 }
