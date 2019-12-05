@@ -294,7 +294,13 @@ class DayDataController extends Controller
 
          //var_dump($pastDays);
          //var_dump($nextDaysUnTraited);
-
+         for($i = 0; $i <= 9; $i++)
+         {
+             if(empty($pastDays[$i]))
+             {
+                 $pastDays[$i] = "No Value";
+             }
+         }
         return [$pastDays,$nextDaysUnTraited];
     }
 

@@ -14,7 +14,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'ViewController@getView');
-Route::get("/?zone={id}",'ViewController@getView');
+Route::get("/zone/{id}",'ViewController@getView');
 
 Route::get('/getAllArea', 'AreaController@getAll');
 

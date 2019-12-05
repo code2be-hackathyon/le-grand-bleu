@@ -10,7 +10,7 @@ class ViewController extends Controller
 {
 
 
-    public function getView($id = 1)
+    public function getView($id= 1 )
     {
 
 
@@ -18,7 +18,7 @@ class ViewController extends Controller
 
         $areaData = app('App\Http\Controllers\AreaController')->getAllData();
 
-        var_dump($dayData[1]);
+        var_dump($dayData[0],$dayData[1]);
         return view('welcome',["areaData" => $areaData],["dayData" => $dayData]);
     }
 
