@@ -90,80 +90,35 @@
                           <tbody class="thead-light">
                             <tr>
                               <th scope="row">Direction du vent</th>
-                              @foreach($dayData as $oneDayData)
+                              @foreach($dayData as $periode)
+                                  @foreach($periode as $oneDayData)
+                                      <td>{{$oneDayData->daydata_windDirection}}</td>
+                                    @endforeach
                               @endforeach
                             </tr>
                             <tr>
                               <th scope="row">Vitesse du vent</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                @foreach($dayData as $periode)
+                                    @foreach($periode as $oneDayData)
+                                        <td>{{$oneDayData->daydata_windSpeed}}</td>
+                                    @endforeach
+                                @endforeach
                             </tr>
                             <tr>
                               <th scope="row">Hauteur de houle</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                @foreach($dayData as $periode)
+                                    @foreach($periode as $oneDayData)
+                                        <td>{{$oneDayData->daydata_waveHeight}}</td>
+                                    @endforeach
+                                @endforeach
                             </tr>
                             <tr>
                                 <th scope="row">Visibilité</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                @foreach($dayData as $periode)
+                                    @foreach($periode as $oneDayData)
+                                        <td>{{$oneDayData->daydata_noteOfTheDay}}</td>
+                                    @endforeach
+                                @endforeach
                             </tr>
                           </tbody>
                         </table>
