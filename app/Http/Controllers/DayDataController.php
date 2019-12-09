@@ -293,25 +293,6 @@ class DayDataController extends Controller
          $pastDays = DB::table('daydata')->select("*")->whereRaw("daydata_date > DATE_FORMAT((NOW() - INTERVAL 10 DAY),'%d%m%Y') AND `daydata_areaId`=".$id)->get();
          $nextDaysUnTraited = DB::table('daydata')->select("*")->whereRaw("daydata_date <= DATE_FORMAT((NOW() + INTERVAL 10 DAY),'%d%m%Y') AND daydata_areaId = ".$id)->get();
 
-         //var_dump($pastDays);
-         //var_dump($nextDaysUnTraited);
-         for($i = 0; $i <= 9; $i++)
-         {
-             if(empty($pastDays[$i]))
-             {
-                 $pastDays[$i] = new stdClass();
-                 $pastDays[$i]->daydata_id = "No Value";
-                    $pastDays[$i]->daydata_windSpeed = "No Value";
-                    $pastDays[$i]->daydata_windDirection = "No Value";
-                    $pastDays[$i]->daydata_waveHeight =  "No Value";
-                    $pastDays[$i]->daydata_temperature ="No Value";
-                    $pastDays[$i]->daydata_noteOfTheDay ="No Value";
-                    $pastDays[$i]->daydata_areaId ="No Value";
-                    $pastDays[$i]->createdAt ="No Value";
-                    $pastDays[$i]->updatedAt ="No Value";
-                    $pastDays[$i]->daydata_date = "No Value";
-             }
-         }
         return [$pastDays,$nextDaysUnTraited];
     }
 

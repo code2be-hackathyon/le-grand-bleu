@@ -53,7 +53,7 @@
 
     <!-- Icons Grid -->
     <section class="features-icons bg-light text-center">
-        <div class="container">
+        <div >
             <div class="row">
                 <div class="col-lg-12">
                     <div>
@@ -65,27 +65,11 @@
                           <thead class="thead-light">
                             <tr>
                               <th scope="col">#</th>
-                              <th scope="col">J-10</th>
-                              <th scope="col">J-9</th>
-                              <th scope="col">J-8</th>
-                              <th scope="col">J-7</th>
-                              <th scope="col">J-6</th>
-                              <th scope="col">J-5</th>
-                              <th scope="col">J-4</th>
-                              <th scope="col">J-3</th>
-                              <th scope="col">J-2</th>
-                              <th scope="col">j-1</th>
-                              <th scope="col">Jour J</th>
-                              <th scope="col">Jour +1</th>
-                              <th scope="col">Jour +2</th>
-                              <th scope="col">Jour +3</th>
-                              <th scope="col">Jour +4</th>
-                              <th scope="col">Jour +5</th>
-                              <th scope="col">Jour +6</th>
-                              <th scope="col">Jour +7</th>
-                              <th scope="col">Jour +8</th>
-                              <th scope="col">Jour +9</th>
-                              <th scope="col">Jour +10</th>
+                                @foreach($dayData as $periode)
+                                    @foreach($periode as $oneDayData)
+                                        <th>{{$oneDayData->daydata_date}}</th>
+                                    @endforeach
+                                @endforeach
                             </tr>
                           </thead>
                           <tbody class="thead-light">
@@ -93,7 +77,7 @@
                               <th scope="row">Direction du vent</th>
                               @foreach($dayData as $periode)
                                   @foreach($periode as $oneDayData)
-                                      <td>{{$oneDayData->daydata_windDirection}}</td>
+                                      <td>{{$oneDayData->daydata_windDirection}}°</td>
                                     @endforeach
                               @endforeach
                             </tr>
@@ -101,7 +85,7 @@
                               <th scope="row">Vitesse du vent</th>
                                 @foreach($dayData as $periode)
                                     @foreach($periode as $oneDayData)
-                                        <td>{{$oneDayData->daydata_windSpeed}}</td>
+                                        <td>{{$oneDayData->daydata_windSpeed}} km/h</td>
                                     @endforeach
                                 @endforeach
                             </tr>
@@ -109,7 +93,7 @@
                               <th scope="row">Hauteur de houle</th>
                                 @foreach($dayData as $periode)
                                     @foreach($periode as $oneDayData)
-                                        <td>{{$oneDayData->daydata_waveHeight}}</td>
+                                        <td>{{$oneDayData->daydata_waveHeight}} m</td>
                                     @endforeach
                                 @endforeach
                             </tr>
@@ -117,7 +101,7 @@
                                 <th scope="row">Visibilité</th>
                                 @foreach($dayData as $periode)
                                     @foreach($periode as $oneDayData)
-                                        <td>{{$oneDayData->daydata_noteOfTheDay}}</td>
+                                        <td>{{$oneDayData->daydata_noteOfTheDay}} /10</td>
                                     @endforeach
                                 @endforeach
                             </tr>
