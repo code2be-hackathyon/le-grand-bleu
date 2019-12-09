@@ -53,7 +53,7 @@
 
     <!-- Icons Grid -->
     <section class="features-icons bg-light text-center">
-        <div >
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-12">
                     <div>
@@ -67,7 +67,7 @@
                               <th scope="col">#</th>
                                 @foreach($dayData as $periode)
                                     @foreach($periode as $oneDayData)
-                                        <th>{{$oneDayData->daydata_date}}</th>
+                                        <th>{{substr($oneDayData->daydata_date,0,5)}}</th>
                                     @endforeach
                                 @endforeach
                             </tr>
