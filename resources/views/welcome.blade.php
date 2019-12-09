@@ -53,7 +53,7 @@
 
     <!-- Icons Grid -->
     <section class="features-icons bg-light text-center">
-        <div class="container-fluid">
+        <div align="center">
             <div class="row">
                 <div class="col-lg-12">
                     <div>
